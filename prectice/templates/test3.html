@@ -1,0 +1,15 @@
+{%extends "base.html"%}
+{%block title%}
+form
+{%endblock title%}
+
+{%block content%}
+<body>
+    
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.fname }}
+        {{ form.lname }}
+        <button type="submit" class="btn btn-primary">submit</button>
+    </form>
+{%endblock content%}

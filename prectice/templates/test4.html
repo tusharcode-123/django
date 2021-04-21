@@ -1,0 +1,14 @@
+{%extends "base.html"%}
+{%block title%}
+update data
+{%endblock title%}
+
+{%block content%}
+<body>
+    
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">update</button>
+    </form>
+{%endblock content%}

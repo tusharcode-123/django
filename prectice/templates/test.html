@@ -1,0 +1,59 @@
+{%extends "base.html"%}
+{%block title%}
+welcome to homepage
+{%endblock title%}
+
+
+{%block content%}
+
+<!-- <a href="/message/create"class="btn btn-primary">adddata</a> -->
+<br>
+<br>
+
+<!-- {{data}} -->
+
+<div class="card" style="width: 50%;">
+  <ul class="list-group list-group-flush">
+    {%for i in data%}
+    <li class="list-group-item">
+      <strong>{{i.fname}}</strong> and is sername is<strong> {{i.lname}}</strong>
+
+      <!-- Button trigger modal -->
+
+      <!-- <a href="/message/{{i.id}}" class="btn btn-primary" data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop">{{i.id}}</a>
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h5 class="card-title">{{i.fname}}</h5>
+              <h5 class="card-text"> {{i.lname}}</h5>
+            </div>
+            <div class="modal-footer">
+              <a href="/message/update/{{data.id}}" class="btn btn-primary">update</a>
+
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+
+
+      <a href="/message/{{i.id}}" class="btn btn-primary">{{i.id}}</a>
+
+      <a href="/message/delete/{{i.id}}" class="btn btn-danger float-right">
+        delete</a>
+    </li>
+    {%endfor%}
+  </ul>
+
+</div>
+
+
+</ul>
+{%endblock content %}

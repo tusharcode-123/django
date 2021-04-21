@@ -1,0 +1,32 @@
+{%extends "base.html"%}
+{%block title%}
+details page
+{%endblock title%}
+
+{%block content%}
+<body>
+
+  
+  
+
+    <div class="card">
+        <div class="card-header" style="background: coral;">
+          details
+        </div>
+        <div class="card-body" style="background: cadetblue;">
+          <h5 class="card-title"> {{data.fname}}</h5>
+          <h5 class="card-text"> {{data.lname}}</h5>
+          <a href="/message/update/{{data.id}}" class="btn btn-primary">update</a>
+        </div>
+      </div>
+
+    <!-- <ul style="background-color: brown;">
+        {{data.fname}}
+    <hr>
+        {{data.lname}}
+    
+    </ul>
+    <a href="/message/update/{{data.id}}">
+    <button class="btn btn-primary">update</button>
+</a> -->
+{%endblock content%}
